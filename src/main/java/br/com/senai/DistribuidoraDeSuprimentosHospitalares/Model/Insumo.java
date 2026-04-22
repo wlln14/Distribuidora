@@ -1,6 +1,5 @@
 package br.com.senai.DistribuidoraDeSuprimentosHospitalares.Model;
 
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -10,19 +9,25 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDate;
+
+@Entity
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
-
-public class Luva {
+public class Insumo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-     private long id;
+    private Long id;
 
-    private String tamanhoLuva;
-    private String vencimentoLuva;
-    private String materialLuva;
+    private String nome;
+    private String categoria;
+    private String tipo;
+    private String tamanho;
+    private int quantidadeEstoque;
+    private int estoqueMinimo;
+    private LocalDate validade;
+
 }

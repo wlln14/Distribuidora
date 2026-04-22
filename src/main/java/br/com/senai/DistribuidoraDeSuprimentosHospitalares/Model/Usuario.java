@@ -9,18 +9,20 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+@Entity
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
-
-public class Seringa {
+public class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
-    private String tipoAgulha;
-    private String capacidadeSeringa;
+    private String nome;
+    private String senha;
+    private String perfil;
+    private boolean ativo;
+
 }
